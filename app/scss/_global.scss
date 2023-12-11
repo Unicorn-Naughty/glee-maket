@@ -9,8 +9,14 @@ body{
 main{
   flex-grow: 1;
 }
-.container{
+.container-page{
   max-width: 1790px;
   padding: 0 10px;
   margin: 0 auto;
 }
+.container-content{
+  max-width: 1190px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+

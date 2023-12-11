@@ -20,9 +20,10 @@
 }
 
 .header {
-  &__inner{
-    padding-top: 50px;
+  &__inner {
+    padding: 50px 0 50px;
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -133,6 +134,126 @@
   }
 }
 
+.footer {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(163, 187, 200, 0.4);
+    padding: 80px 0 75px;
+  }
+
+  &__top-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__top-adress {
+    margin-bottom: 10px;
+    margin-top: 25px;
+    text-transform: uppercase;
+
+    span {
+      text-transform: capitalize;
+    }
+  }
+
+  &__top-phone {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__top-email {
+    text-transform: uppercase;
+
+    span {
+      text-transform: lowercase
+    }
+  }
+
+  &__top-link {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7b7b7b;
+
+
+  }
+
+  &__top-title {
+    margin-top: 22px;
+    margin-bottom: 25px;
+    @extend %dmsans-700;
+    color: #1f2044;
+    font-size: 16px;
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+
+  &__top-items {
+    margin-bottom: 10px;
+  }
+
+  &__top-text {
+    @extend %rubik-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #7b7b7b;
+    margin-bottom: 20px;
+    max-width: 243px;
+    width: 100%;
+  }
+
+  &__top-form-input {
+    background-color: #fef7f0;
+    border: none;
+    padding: 15px;
+
+    &::placeholder {
+      font-size: 12px;
+      @extend %dmsans-400;
+      color: #234969;
+    }
+  }
+
+  &__btn {
+    @extend %btn;
+    margin-left: -3px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 40px;
+
+  }
+
+  &__bottom-text,
+  &__bottom-link {
+    @extend %rubik-400;
+    color: #7b7b7b;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  &__bottom-list{
+    display: flex
+  }
+  &__bottom-item:not(:last-child){
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 7px;
+      right: -15px;
+      height: 17px;
+     
+      border: 1px solid #7b7b7b;
+    }
+  }
+  &__bottom-item +  .footer__bottom-item{
+    margin-left: 30px;
+  }
+}
 
 
 
