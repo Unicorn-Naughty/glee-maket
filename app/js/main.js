@@ -7,4 +7,13 @@ autoplaySpeed: 2000,
 fade: true
   });
 
+
+
+
+
+
+
+
+  var mixer = mixitup('.products-week__content');
+
 });

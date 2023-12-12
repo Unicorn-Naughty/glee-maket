@@ -267,12 +267,12 @@
     background-size: cover;
     background-position: center center;
     min-height: 100%;
-    padding-top: 200px;
+    padding-top: 175px;
     padding-bottom: 45px;
   }
 
   &__item {
-    padding-bottom: 200px;
+    padding-bottom: 175px;
   }
 
   &__title {
@@ -374,7 +374,29 @@
     justify-content: space-around
   }
 
-  &-box {}
+  &-box:nth-child(2) {
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 170px;
+      background-color: #e8e4df;
+    }
+
+    &::after {
+      top: -45px;
+      left: 364px;
+    }
+
+    &::before {
+      top: -45px;
+      right: 390px;
+    }
+  }
+
 
   &-subtitle {
     @extend %dmsans-700;
@@ -382,7 +404,35 @@
     font-size: 18px;
     line-height: 25px;
     margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: -75px;
+
+    }
   }
+
+  &-subtitle--support::before {
+    width: 51px;
+    height: 53px;
+    background-image: url(../images/icons/support.svg);
+  }
+
+  &-subtitle--delivery::before {
+    width: 53px;
+    height: 36px;
+    background-image: url(../images/icons/delivery.svg);
+  }
+
+  &-subtitle--payment::before {
+    width: 53px;
+    height: 52px;
+    background-image: url(../images/icons/payment.svg);
+  }
+
 
   &-text {
     @extend %dmsans-400;
@@ -394,7 +444,172 @@
 
 }
 
+.products-week {
+  padding-top: 75px;
+  &__content{
+    padding-bottom: 185px;
+  }
 
+  &__selectors {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+  }
+
+  &__btn {
+    @extend %btn-selector;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+      color: $title;
+    }
+  }
+
+  &__btn.mixitup-control-active {
+    color: $title;
+  }
+
+  &__btn+.products-week__btn {
+    margin-left: 30px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 40px 30px;
+  }
+
+  &__item {
+    width: 270px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 10px;
+    padding: 25px 40px 35px;
+    text-align: center;
+
+    &:hover {
+      .products-week__link-box {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__box-img {
+    height: 210px;
+    margin-bottom: 55px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__link-box {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transform: translateY(300%);
+    bottom: 20px;
+    transition: all .5s;
+
+    & a+a {
+      margin-left: 15px;
+    }
+  }
+
+  &__link {
+    background-color: rgb(255, 255, 255);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+
+    &:hover {
+      background-color: $light-blue;
+
+      path {
+        fill: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  &__title {
+    @extend %dmsans-500;
+    color: $dark-blue;
+    font-size: 16px;
+    line-height: 40px;
+  }
+
+  &__price {
+    @extend %dmsans-700;
+    color: $light-blue;
+  }
+}
+.products-info {
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    background-color: #feefe2;
+    display: flex;
+    width: 800px;
+    padding: 100px 50px 100px 150px; 
+    &:first-child{
+      margin-right: 30px;
+    }
+  }
+
+  &__item-box {
+  
+    padding-left: 20px;
+  }
+&__item-img{
+  margin-top: -200px;
+}
+  &__title {
+    @extend %dmsans-700;
+    color: $dark-blue;
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 15px;
+  }
+
+  &__text {
+    @extend %rubik-400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $dark-blue;
+    margin-bottom: 25px;
+  }
+
+  &__link {
+    @extend %rubik-500;
+    font-size: 15px;
+    line-height: 20px;
+    color: $normal-blue;
+    max-width: 180px;
+    width: 100%;
+    padding: 23px 0 23px 15px;
+    border-radius: 5px;
+    border: 1px solid #b3b7b5;
+    display: block;
+
+  }
+}
 
 
 
