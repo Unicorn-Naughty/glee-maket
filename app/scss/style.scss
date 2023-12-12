@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 .logo {
@@ -235,24 +236,162 @@
     font-size: 14px;
     line-height: 32px;
   }
-  &__bottom-list{
+
+  &__bottom-list {
     display: flex
   }
-  &__bottom-item:not(:last-child){
+
+  &__bottom-item:not(:last-child) {
     position: relative;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       top: 7px;
       right: -15px;
       height: 17px;
-     
+
       border: 1px solid #7b7b7b;
     }
   }
-  &__bottom-item +  .footer__bottom-item{
+
+  &__bottom-item+.footer__bottom-item {
     margin-left: 30px;
   }
+}
+
+.top-slider {
+  &__inner {
+    background-image: url(../images/to-slider-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100%;
+    padding-top: 200px;
+    padding-bottom: 45px;
+  }
+
+  &__item {
+    padding-bottom: 200px;
+  }
+
+  &__title {
+    font-size: 72px;
+    line-height: 92px;
+    color: $dark-blue;
+    @extend %rubik-500;
+    margin-bottom: 35px;
+    max-width: 411px;
+    width: 100%;
+    position: relative;
+
+    &::after {
+
+      content: "";
+      width: 640px;
+      height: 240px;
+      top: 134px;
+      left: 526px;
+      background-image: url(../images/top-slider-img.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      position: absolute;
+
+
+
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 25px;
+    color: $normal-blue;
+    @extend %rubik-400;
+    margin-bottom: 35px;
+    max-width: 360px;
+  }
+
+  &__link {
+    @extend %btn;
+    padding: 25px 100px 25px 25px;
+    @extend %rubik-500;
+    position: relative;
+    display: block;
+    max-width: 202px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 9px;
+      top: 30px;
+      right: 15px;
+      background-image: url(../images/icons/arrow.svg);
+
+    }
+  }
+
+
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+
+
+
+  & li+li {
+    margin-left: 10px;
+
+  }
+
+  & li button {
+    font-size: 10px;
+    line-height: 12px;
+    @extend %rubik-500;
+    color: #667983;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background-color: #fde3cc;
+
+  }
+
+  & .slick-active button {
+    background-color: #fff;
+    color: $dark-blue;
+  }
+
+}
+
+.top-slider__info {
+  background-color: #fef7f0;
+  padding: 45px 0 45px;
+
+  &-content {
+    display: flex;
+    justify-content: space-around
+  }
+
+  &-box {}
+
+  &-subtitle {
+    @extend %dmsans-700;
+    color: #414141;
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 10px;
+  }
+
+  &-text {
+    @extend %dmsans-400;
+    font-size: 16px;
+    line-height: 23px;
+    color: #585858;
+    font-family: 'DMSans-Regular';
+  }
+
 }
 
 
