@@ -612,6 +612,17 @@
     border-radius: 5px;
     border: 1px solid #b3b7b5;
     display: block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      background-image: url(../images/icons/arrow-view.svg);
+      width: 22px;
+      height: 9px;
+    }
 
   }
 }
@@ -707,6 +718,143 @@
     margin: 0 auto;
     padding-top: 175px;
     cursor: pointer
+  }
+}
+
+.insights {
+  &__inner {
+    padding-top: 120px;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 45px;
+
+  }
+
+  &__title {
+    margin: 0px;
+  }
+
+  &__top-link {
+    @extend %dmsans-700;
+    font-size: 16px;
+    color: #262626;
+    margin-bottom: 8px;
+
+    span {
+      margin-left: 15px;
+    }
+  }
+
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -170px;
+  }
+
+  &__item-box {
+    max-width: 370px;
+    box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+    border-radius: 5px;
+    background-color: #fff;
+  }
+
+  &__box-img {
+    object-fit: cover;
+    height: 250px;
+  }
+
+  &__item {
+    padding: 35px 0 20px 30px;
+  }
+
+  &__item-title {
+    max-width: 285px;
+    width: 100%;
+    min-height: 90px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    position: relative;
+
+    &::before {
+      content: "NEWS";
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      background-color: rgb(163, 187, 200);
+      width: 103px;
+      padding: 5px 30px;
+      border-radius: 30px;
+      position: absolute;
+      @extend %dmsans-700;
+      top: -49px;
+      left: 0;
+    }
+
+  }
+
+  &__item-link {
+    @extend %dmsans-500;
+    color: #262626;
+    font-size: 18px;
+  }
+
+  &__item-info {
+    display: flex;
+  }
+
+  &__item-date,
+  &__item-author {
+    font-size: 12px;
+    line-height: 30px;
+    text-transform: uppercase;
+    @extend %rubik-400;
+    color: #222933;
+    padding-left: 22px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 9px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &__item-date {
+    margin-right: 30px;
+
+    &::before {
+      background-image: url(../images/icons/time.svg);
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  &__item-author::before {
+    background-image: url(../images/icons/user.svg);
+    background-repeat: no-repeat;
+
+  }
+
+}
+
+.partners {
+  background-color: #fef7f0;
+
+  &__items {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 265px 0 90px;
   }
 }
 
