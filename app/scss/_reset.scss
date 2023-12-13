@@ -8,8 +8,8 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol{
   padding: 0;
 }
 
@@ -44,9 +44,4 @@ img {
   display: block;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+

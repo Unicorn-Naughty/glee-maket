@@ -24,15 +24,26 @@ $bg-white: #fef7f0;
   font-family: 'Rubik-Medium';
   font-weight: 500;
 }
+
 %rubik-400 {
   font-family: 'Rubik-Regular';
   font-weight: 400;
 }
-%btn{
+
+%btn {
   @extend %dmsans-400;
   color: #fff;
   background-color: $light-blue;
   padding: 15px;
   border: none;
   cursor: pointer;
+}
+
+%btn-selector {
+  border: none;
+  background-color: transparent;
+  @extend %dmsans-700;
+  color: #8b8b8b;
+  font-size: 16px;
+  padding: 0;
 }
