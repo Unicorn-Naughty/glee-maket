@@ -446,7 +446,8 @@
 
 .products-week {
   padding-top: 75px;
-  &__content{
+
+  &__content {
     padding-bottom: 185px;
   }
 
@@ -557,6 +558,7 @@
     color: $light-blue;
   }
 }
+
 .products-info {
   &__items {
     display: flex;
@@ -567,19 +569,22 @@
     background-color: #feefe2;
     display: flex;
     width: 800px;
-    padding: 100px 50px 100px 150px; 
-    &:first-child{
+    padding: 100px 50px 100px 150px;
+
+    &:first-child {
       margin-right: 30px;
     }
   }
 
   &__item-box {
-  
+
     padding-left: 20px;
   }
-&__item-img{
-  margin-top: -200px;
-}
+
+  &__item-img {
+    margin-top: -200px;
+  }
+
   &__title {
     @extend %dmsans-700;
     color: $dark-blue;
@@ -610,6 +615,101 @@
 
   }
 }
+
+.new-design {
+  padding-top: 100px;
+
+  &__content {
+    margin-bottom: 120px;
+  }
+
+  &__selectors {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 75px;
+  }
+
+  &__selectors-btn {
+    @extend %btn-selector;
+    transition: all .5s;
+    cursor: pointer;
+
+    &:hover {
+      color: $title;
+    }
+  }
+
+  &__selectors-btn.mixitup-control-active {
+    color: $title;
+  }
+
+  &__selectors-btn+.new-design__selectors-btn {
+    margin-left: 30px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__item {
+    background-color: #f8f8f8;
+    padding: 35px 0 125px 35px;
+    width: 375px;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+
+    &-chairs img {
+      left: 200px;
+    }
+  }
+
+  &__item-title {
+    font-size: 20px;
+    @extend %dmsans-700;
+    color: $title;
+    margin-bottom: 10px;
+    max-width: 170px;
+    width: 100%;
+
+    a {
+      color: $title;
+    }
+
+  }
+
+  &__item-text {
+    font-size: 16px;
+    @extend %dmsans-700;
+    color: $light-blue;
+  }
+
+  &__item-img {
+    position: absolute;
+    bottom: 35px;
+    left: 100px;
+  }
+
+  &__video {
+    background-image: url(../images/bg-vid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+  }
+
+  &__video-link {
+    width: 127px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 175px;
+    cursor: pointer
+  }
+}
+
 
 
 
