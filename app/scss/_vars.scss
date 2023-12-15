@@ -29,6 +29,10 @@ $bg-white: #fef7f0;
   font-family: 'Rubik-Regular';
   font-weight: 400;
 }
+%rubik-300 {
+  font-family: 'Rubik-Light';
+  font-weight: 300;
+}
 
 %btn {
   @extend %dmsans-400;
