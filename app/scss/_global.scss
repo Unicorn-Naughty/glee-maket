@@ -93,3 +93,23 @@ main {
   }
 }
 
+.filter__title {
+  @extend %dmsans-700;
+  font-size: 18px;
+  color: $dark-blue;
+  line-height: 24px;
+  margin-bottom: 27px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    right: -55px;
+    background-image: url(../images/icons/title-line-shop.svg);
+    width: 38px;
+    height: 2px;
+  }
+}
