@@ -30,6 +30,11 @@ $bg-white: #fef7f0;
   font-weight: 400;
 }
 
+%rubik-300 {
+  font-family: 'Rubik-Light';
+  font-weight: 300;
+}
+
 %btn {
   @extend %dmsans-400;
   color: #fff;
@@ -46,4 +51,12 @@ $bg-white: #fef7f0;
   color: #8b8b8b;
   font-size: 16px;
   padding: 0;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
 }
