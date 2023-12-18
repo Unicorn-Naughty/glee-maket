@@ -1,4 +1,21 @@
 $(function () {
+  $('.products-list__star').rateYo({
+    starWidth: "20px",
+    normalFill: "#d6d6d6",
+    ratedFill: "#ffcc00",
+    readOnly: true,
+    halfStar: true,
+    numStars: 5,
+    spacing: "10px"
+  });
+
+
+
+
+
+
+
+
   $(".filter-price__input").ionRangeSlider({
     type: "double",
     onStart: function (data) {
@@ -11,9 +28,9 @@ $(function () {
     },
   });
   $('.filter-recent__star').rateYo({
-    starWidth: "11px" ,
+    starWidth: "11px",
     normalFill: "#d6d6d6",
-    ratedFill:"#ffcc00",
+    ratedFill: "#ffcc00",
     readOnly: true,
     halfStar: true,
     numStars: 5,
@@ -25,11 +42,11 @@ $(function () {
 
 
   $('.top-slider__items').slick({
-arrows: false,
-dots: true,
-autoplay: true,
-autoplaySpeed: 2000,
-fade: true
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true
   });
 
 
