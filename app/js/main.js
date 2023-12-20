@@ -1,4 +1,54 @@
 $(function () {
+  $('.product-details__related-items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    arrows: true,
+    prevArrow: '<button type="button" class="slick-prev"><img src="images/icons/arrow-prev.svg" alt=""></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="images/icons/arrow-next.svg" alt=""></button>',
+    autoplay:true,
+    speed: 2500
+  });
+
+
+
+
+  $('.tabs-top__item').on('click', function (e) {
+    e.preventDefault();
+
+    $('.tabs-top__item').removeClass('tabs-top__item--active');
+    $(this).addClass('tabs-top__item--active');
+
+    $('.tabs-content__item').removeClass('tabs-content__item--active');
+    $($(this).attr('href')).addClass('tabs-content__item--active');
+
+  });
+
+
+  $('.product-details__input').styler();
+
+
+
+
+
+  $('.product-details__thumb').slick({
+    asNavFor: '.product-details__big',
+    focusOnSelect: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    vertical: true,
+    draggable: false
+  });
+  $('.product-details__big').slick({
+    asNavFor: '.product-details__thumb',
+    draggable: false,
+    arrows: false,
+    fade: true
+  });
+
+
+
+
+
   $('.products-list__star').rateYo({
     starWidth: "20px",
     normalFill: "#d6d6d6",
