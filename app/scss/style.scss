@@ -1341,6 +1341,7 @@
 
   &__content {
     padding: 30px 0 30px;
+    margin-left: 15px;
 
     & .products-list__title {
       margin-bottom: 15px;
@@ -1407,10 +1408,16 @@
   }
 }
 
-.slick-initialized .slick-slide {
+.product-details__thumb-item.slick-slide {
   width: 140px;
   border: 1px solid #f2f2f2;
   display: flex
+}
+
+.product-details__big-item.slick-slide {
+  border: 1px solid #f2f2f2;
+  justify-content: center;
+  display: flex;
 }
 
 .jq-number {
@@ -1591,7 +1598,8 @@
   height: 450px;
   padding: 15px 0;
 }
-.product-details__related-item.slick-slide{
+
+.product-details__related-item.slick-slide {
   border: none;
 }
 
