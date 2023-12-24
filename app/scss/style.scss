@@ -1603,4 +1603,284 @@
   border: none;
 }
 
+.about {
+  padding-top: 120px;
+  margin-bottom: 80px;
+
+}
+
+.about-info {
+
+  &__items {
+    display: flex;
+    margin-bottom: 120px;
+  }
+
+  &__imgbox {
+    width: 100%;
+  }
+
+  &__img {
+    max-width: 570px;
+    width: 570px;
+    height: 680px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding-top: 70px;
+    margin-left: 50px;
+  }
+
+  &__subtitle {
+    display: flex;
+    margin-bottom: 45px;
+  }
+
+  &__subtitle-num {
+    @extend %dmsans-700;
+    font-size: 140px;
+    color: $light-blue;
+    line-height: 1;
+  }
+
+  &__subtitle-text {
+    color: $dark-blue;
+    @extend %rubik-400;
+    font-size: 16px;
+    width: 86px;
+    line-height: 27px;
+    padding-top: 43px;
+    margin-left: 30px;
+  }
+
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $dark-blue;
+    margin-bottom: 45px;
+  }
+
+  &__text {
+    color: $dark-blue;
+    @extend %rubik-400;
+    font-size: 16px;
+    padding-bottom: 65px;
+    border-bottom: 2px solid #e6eaf0;
+    margin-bottom: 45px;
+    width: 552px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 60px;
+    padding-bottom: 85px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__item--projects::before {
+    background-image: url(../images/content/about/list.svg);
+    width: 36px;
+    height: 37px;
+  }
+
+  &__item--revenue::before {
+    background-image: url(../images/content/about/rupor.svg);
+    width: 43px;
+    height: 39px;
+  }
+
+  &__item--awards::before {
+    background-image: url(../images/content/about/medals.svg);
+    width: 41px;
+    height: 40px;
+  }
+
+
+  &__item-numbers {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $dark-blue;
+    line-height: 27px;
+  }
+
+  &__item-text {
+    color: #4c4c4c;
+    @extend %dmsans-700;
+    font-size: 16px;
+  }
+}
+
+.about-rewards {
+  background-color: #fcd7b6;
+  margin-bottom: 120px;
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    flex-direction: column;
+    padding: 85px 0px 80px;
+  }
+
+  &__num {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $dark-blue;
+
+  }
+
+  &__text {
+    @extend %dmsans-700;
+    font-size: 18px;
+    color: $dark-blue;
+  }
+}
+
+
 @import 'media';
+
+.about-team {
+  &__inner {
+    display: flex;
+  }
+
+  &__descr {
+    width: 286px;
+    margin-right: 110px;
+  }
+
+  &__title {
+    @extend %dmsans-700;
+    font-size: 36px;
+    color: $dark-blue;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    color: $dark-blue;
+    @extend %rubik-400;
+    font-size: 16px;
+    margin-bottom: 35px;
+  }
+
+  &__btn {
+    @extend %btn;
+    position: relative;
+    border-radius: 5px;
+    padding-left: 25px;
+    padding-right: 60px;
+    margin-top: 35px;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 20px;
+      width: 15px;
+      height: 11px;
+      background-image: url(../images/content/about/arrow.svg);
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px 30px
+  }
+
+  &__img {
+    width: 370px;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+}
+
+.item-box {
+  display: flex;
+  padding: 30px 20px;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -80px;
+  background-color: #fff;
+  box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+  width: 325px;
+
+  &__info-name {
+    margin-bottom: 20px;
+    font-size: 22px;
+    @extend %dmsans-700;
+    color: $normal-blue;
+
+  }
+
+  &__info-prof {
+    @extend %rubik-400;
+    font-size: 16px;
+    color: #565872;
+  }
+
+  &__society {
+    display: flex;
+  }
+
+  &__society-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    transition: all .5s;
+
+    svg {
+      path {
+        transition: all .5s;
+      }
+    }
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #ececec;
+      box-shadow: 0px 6px 57px 0px rgba(37, 37, 37, 0.05);
+
+      svg {
+        path {
+          fill: $normal-blue;
+        }
+      }
+    }
+
+    &+.item-box__society-link {
+      margin-left: 7px;
+    }
+
+  }
+
+}
