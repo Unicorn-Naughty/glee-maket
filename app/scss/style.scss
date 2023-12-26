@@ -2152,9 +2152,11 @@
       margin-left: 12px;
     }
   }
-&__comments{
-  margin-bottom: 100px;
-}
+
+  &__comments {
+    margin-bottom: 100px;
+  }
+
   &__comments-title {
     @extend %dmsans-700;
     font-size: 24px;
@@ -2198,41 +2200,66 @@
 
 .review-form {
   &__input {
-    padding: 15px 17px;
+    padding: 15px 40px 15px 17px;
     width: 400px;
     border: 1px solid #999999;
     font-size: 16px;
     @extend %rubik-400;
     color: #333333;
-    margin-bottom: 20px;
-
-    &:first-child {
-      margin-right: 25px;
-    }
 
     &:focus {
       outline: 1px solid #a3bbc8;
       border: none;
     }
+
+  }
+
+  &__input-box {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__label {
+    position: relative;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+
   }
 
   &__textarea {
     width: 830px;
     height: 120px;
     resize: none;
-    padding: 15px 17px;
+    padding: 15px 40px 17px 15px;
     border: 1px solid #999999;
     font-size: 16px;
     @extend %rubik-400;
     color: #333333;
-    margin-bottom: 40px;
 
     &:focus {
       outline: 1px solid #a3bbc8;
       border: none;
     }
   }
-  &__btn{
+&__label-textarea{
+  position: relative;
+  display: flex;
+  margin-bottom: 40px;
+
+}
+&__icon-textarea{
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
+  &__btn {
     @extend %btn;
     width: 190px;
     @extend %rubik-400;
