@@ -11,7 +11,11 @@ body {
 main {
   flex-grow: 1;
 }
-
+#map{
+  height: 300px;
+  width: 100%;
+  margin-left: 50px;
+}
 .container-page {
   max-width: 1790px;
   padding: 0 10px;
@@ -113,3 +117,43 @@ main {
     height: 2px;
   }
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    padding-left: 5px;
+
+  }
+
+  &__item+.pagination__item {
+    margin-left: 15px;
+  }
+
+  &__link {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #a3bbc8;
+    @extend %rubik-400;
+    color: $dark-blue;
+    font-size: 16px;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--active {
+      background-color: #a3bbc8;
+      color: #fef7f0;
+    }
+  }
+
+  &__link-next {
+    margin-left: 15px;
+    width: 74px;
+  }
+}
+
