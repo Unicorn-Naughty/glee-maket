@@ -11,7 +11,11 @@ body {
 main {
   flex-grow: 1;
 }
-
+#map{
+  height: 300px;
+  width: 100%;
+  margin-left: 50px;
+}
 .container-page {
   max-width: 1790px;
   padding: 0 10px;
@@ -152,3 +156,4 @@ main {
     width: 74px;
   }
 }
+

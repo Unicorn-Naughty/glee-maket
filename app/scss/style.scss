@@ -2247,17 +2247,19 @@
       border: none;
     }
   }
-&__label-textarea{
-  position: relative;
-  display: flex;
-  margin-bottom: 40px;
 
-}
-&__icon-textarea{
-  position: absolute;
-  right: 25px;
-  top: 20px;
-}
+  &__label-textarea {
+    position: relative;
+    display: flex;
+    margin-bottom: 40px;
+
+  }
+
+  &__icon-textarea {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+  }
 
   &__btn {
     @extend %btn;
@@ -2401,3 +2403,109 @@
   }
 
 }
+
+.contact {
+  padding-top: 120px;
+
+  &__info {
+    margin-bottom: 120px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    @extend %dmsans-700;
+    font-size: 35px;
+    line-height: 57px;
+    color: $dark-blue;
+    margin-bottom: 70px;
+  }
+
+  &__subtitle {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $light-blue;
+  }
+
+  &__info-items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-item {
+    width: 370px;
+    padding: 70px 5px 80px;
+    background-color: #fbfbfb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:hover {
+      rotate: 0;
+      border: 1px solid $light-blue;
+      .contact__info-icon {
+        background-color: $light-blue;
+        svg{
+          path{
+            fill:#fff;
+          }
+        }
+      }
+    }
+  }
+
+  &__info-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 18px;
+    background-color: #ffffff;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+  }
+
+  &__info-title {
+
+    @extend %dmsans-700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #222222;
+    margin-bottom: 25px;
+  }
+
+  &__info-address {
+    font-size: 16px;
+    @extend %rubik-400;
+    color: #565872;
+    width: 160px;
+    font-style: normal;
+    text-align: center;
+    line-height: 26px;
+  }
+
+  &__info-phone,
+  &__info-email {
+    font-size: 16px;
+    @extend %rubik-400;
+    color: #565872;
+    font-style: normal;
+    text-align: center;
+    line-height: 26px;
+  }
+  &__inner{
+    display: flex;
+    .review-form{
+      width: 630px;
+    }
+    .review-form__input{
+      width: 300px;
+    }
+    .review-form__btn{
+      border-radius: 5px;
+    }
+  }
+}
+

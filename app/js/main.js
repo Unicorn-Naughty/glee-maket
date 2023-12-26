@@ -1,4 +1,21 @@
 $(function () {
+  let map;
+
+  async function initMap() {
+    const { Map } = await google.maps.importLibrary("maps");
+
+    map = new Map(document.getElementById("map"), {
+      center: { lat: -34.397, lng: 150.644 },
+      zoom: 8,
+    });
+  }
+
+  initMap();
+
+
+
+
+
   $('.product-details__related-items').slick({
     slidesToShow: 4,
     slidesToScroll: 2,
