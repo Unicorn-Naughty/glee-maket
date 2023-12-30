@@ -11,11 +11,13 @@ body {
 main {
   flex-grow: 1;
 }
-#map{
+
+#map {
   height: 300px;
   width: 100%;
   margin-left: 50px;
 }
+
 .container-page {
   max-width: 1790px;
   padding: 0 10px;
@@ -52,6 +54,7 @@ main {
   background-color: #edf1f4;
   padding: 35px 0 35px;
 
+
   &__title {
     @extend %rubik-300;
     font-size: 36px;
@@ -63,6 +66,7 @@ main {
   &__list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -156,4 +160,9 @@ main {
     width: 74px;
   }
 }
+#map{
+  margin-left: 0px;
+  margin-bottom: 20px;
+}
+
 
